@@ -150,22 +150,22 @@ export default function Beranda() {
         >
           {[{
             nama: 'Toko Online Fashion',
-            testimoni: '“Website yang dibuat sangat cocok dengan visi brand kami. Fitur-fiturnya sangat mendukung untuk meningkatkan penjualan!”',
+            testimoni: 'Website yang dibuat sangat cocok dengan visi brand kami. Fitur-fiturnya sangat mendukung untuk meningkatkan penjualan!',
             foto: '/images/g7.jpeg',
           },
           {
             nama: 'Toko Makanan Organik',
-            testimoni: '“Kami sangat puas dengan hasil kerja tim. Integrasi pembayaran dan pengiriman berjalan lancar, pelanggan kami senang berbelanja!”',
+            testimoni: 'Kami sangat puas dengan hasil kerja tim. Integrasi pembayaran dan pengiriman berjalan lancar, pelanggan kami senang berbelanja!',
             foto: '/images/g8.jpeg',
           },
           {
             nama: 'Portal Berita',
-            testimoni: '“Website berita kami sekarang lebih interaktif dan mudah dikelola. Pembaca juga merasa lebih nyaman mengakses artikel kami.”',
+            testimoni: 'Website berita kami sekarang lebih interaktif dan mudah dikelola. Pembaca juga merasa lebih nyaman mengakses artikel kami.',
             foto: '/images/g9.jpeg',
           },
           {
             nama: 'Aplikasi Layanan Pelanggan',
-            testimoni: '“Aplikasi yang dibuat sangat memudahkan tim kami dalam memberikan layanan pelanggan, dan dashboardnya memberikan wawasan yang sangat berguna.”',
+            testimoni: 'Aplikasi yang dibuat sangat memudahkan tim kami dalam memberikan layanan pelanggan, dan dashboardnya memberikan wawasan yang sangat berguna.',
             foto: '/images/g10.jpeg',
           },
           ].map((item, i) => (
