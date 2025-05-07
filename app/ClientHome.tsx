@@ -230,13 +230,14 @@ export default function Beranda() {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Kontak</h3>
-            <p>Email: oneweb@gmail.com</p>
-            <p>WhatsApp: 0812-3456-7890</p>
-            <p>Instagram: <a href="https://instagram.com/oneweb" target="_blank" className="hover:text-yellow-400">@oneweb</a></p>
+            <p className="space-y-1">
+              <span>Email: support@umkmstore.com</span>
+              <span>Phone: +62 812-3456-7890</span>
+            </p>
           </div>
         </div>
-        <div className="mt-8 border-t pt-4 text-center text-xs text-gray-400">
-          &copy; {new Date().getFullYear()} OneWeb creator e-commerce UMKM . All rights reserved.
+        <div className="mt-8 text-center text-gray-500 text-sm">
+          <p>&copy; 2025 UMKM Store. All rights reserved.</p>
         </div>
       </footer>
     </main>
