@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, Star, Workflow, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react'; // Hanya mengambil yang digunakan
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -108,10 +108,10 @@ export default function Beranda() {
       >
         <h2 className="text-2xl font-semibold text-center mb-6">Layanan Kami</h2>
         <div className="grid md:grid-cols-4 gap-6">
-          {[{ title: 'Web E-Commerce', icon: <CheckCircle className="w-6 h-6" />, desc: 'Pembuatan website toko online lengkap dengan fitur pembayaran dan pengiriman.' },
-            { title: 'Desain UI/UX', icon: <Star className="w-6 h-6" />, desc: 'Tampilan yang menarik dan mudah digunakan untuk meningkatkan penjualan.' },
-            { title: 'SEO & Optimasi', icon: <CheckCircle className="w-6 h-6" />, desc: 'Website yang mudah ditemukan di Google dan cepat diakses.' },
-            { title: 'Maintenance & Support', icon: <Workflow className="w-6 h-6" />, desc: 'Dukungan teknis dan perawatan rutin agar situs selalu optimal.' }
+          {[{ title: 'Web E-Commerce', icon: <X className="w-6 h-6" />, desc: 'Pembuatan website toko online lengkap dengan fitur pembayaran dan pengiriman.' },
+            { title: 'Desain UI/UX', icon: <X className="w-6 h-6" />, desc: 'Tampilan yang menarik dan mudah digunakan untuk meningkatkan penjualan.' },
+            { title: 'SEO & Optimasi', icon: <X className="w-6 h-6" />, desc: 'Website yang mudah ditemukan di Google dan cepat diakses.' },
+            { title: 'Maintenance & Support', icon: <X className="w-6 h-6" />, desc: 'Dukungan teknis dan perawatan rutin agar situs selalu optimal.' }
           ].map((layanan, i) => (
             <motion.div
               key={i}
@@ -131,8 +131,8 @@ export default function Beranda() {
         </div>
       </motion.section>
 
-            {/* Testimoni Pelanggan with Animation */}
-            <motion.section
+      {/* Testimoni Pelanggan with Animation */}
+      <motion.section
         id="testimoni"
         className="mt-16"
         initial={{ opacity: 0, y: 50 }}
@@ -148,27 +148,26 @@ export default function Beranda() {
           modules={[Autoplay]}
           className="w-full max-w-3xl mx-auto"
         >
-          {[
-            {
-              nama: 'Toko Online Fashion',
-              testimoni: '“Website yang dibuat sangat cocok dengan visi brand kami. Fitur-fiturnya sangat mendukung untuk meningkatkan penjualan!”',
-              foto: '/images/g7.jpeg', // Gambar projek atau gambar tim klien
-            },
-            {
-              nama: 'Toko Makanan Organik',
-              testimoni: '“Kami sangat puas dengan hasil kerja tim. Integrasi pembayaran dan pengiriman berjalan lancar, pelanggan kami senang berbelanja!”',
-              foto: '/images/g8.jpeg', // Gambar projek atau gambar tim klien
-            },
-            {
-              nama: 'Portal Berita',
-              testimoni: '“Website berita kami sekarang lebih interaktif dan mudah dikelola. Pembaca juga merasa lebih nyaman mengakses artikel kami.”',
-              foto: '/images/g9.jpeg', // Gambar projek atau gambar tim klien
-            },
-            {
-              nama: 'Aplikasi Layanan Pelanggan',
-              testimoni: '“Aplikasi yang dibuat sangat memudahkan tim kami dalam memberikan layanan pelanggan, dan dashboardnya memberikan wawasan yang sangat berguna.”',
-              foto: '/images/g10.jpeg', // Gambar projek atau gambar tim klien
-            },
+          {[{
+            nama: 'Toko Online Fashion',
+            testimoni: '“Website yang dibuat sangat cocok dengan visi brand kami. Fitur-fiturnya sangat mendukung untuk meningkatkan penjualan!”',
+            foto: '/images/g7.jpeg',
+          },
+          {
+            nama: 'Toko Makanan Organik',
+            testimoni: '“Kami sangat puas dengan hasil kerja tim. Integrasi pembayaran dan pengiriman berjalan lancar, pelanggan kami senang berbelanja!”',
+            foto: '/images/g8.jpeg',
+          },
+          {
+            nama: 'Portal Berita',
+            testimoni: '“Website berita kami sekarang lebih interaktif dan mudah dikelola. Pembaca juga merasa lebih nyaman mengakses artikel kami.”',
+            foto: '/images/g9.jpeg',
+          },
+          {
+            nama: 'Aplikasi Layanan Pelanggan',
+            testimoni: '“Aplikasi yang dibuat sangat memudahkan tim kami dalam memberikan layanan pelanggan, dan dashboardnya memberikan wawasan yang sangat berguna.”',
+            foto: '/images/g10.jpeg',
+          },
           ].map((item, i) => (
             <SwiperSlide key={i}>
               <Card className="p-6 text-center shadow-md">

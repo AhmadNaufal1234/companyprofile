@@ -3,13 +3,11 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, Star, Workflow, Menu, X } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Menu, X } from 'lucide-react';
 import 'swiper/css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';  // Import framer-motion
+import { motion } from 'framer-motion';  
 
 const projects = [
     {
