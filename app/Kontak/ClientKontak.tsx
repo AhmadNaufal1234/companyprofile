@@ -27,7 +27,7 @@ export default function Kontak() {
   return (
     <main className="min-h-screen bg-gray-50 px-4 py-10 md:px-20 lg:px-32">
       {/* Navbar */}
-      <header className="flex justify-end items-center py-1 bg-white w-full m-0 px-0 fixed top-0 right-0 z-50 border-b border-gray-200 shadow-md">
+      <header className="flex justify-between items-center py-1 bg-white w-full m-0 px-0 fixed top-0 right-0 z-50 border-b border-gray-200 shadow-md">
         <div className="mr-10 ml-4">
           <Link href="/" className="block">
             <Image

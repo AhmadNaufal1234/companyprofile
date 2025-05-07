@@ -18,7 +18,7 @@ export default function Beranda() {
   return (
     <main className="space-y-16 px-4 py-10 md:px-20 lg:px-32">
       {/* Navbar */}
-      <header className="flex justify-end items-center py-1 bg-white w-full m-0 px-0 fixed top-0 right-0 z-50 border-b border-gray-200 shadow-md">
+      <header className="flex justify-between items-center py-1 bg-white w-full m-0 px-0 fixed top-0 right-0 z-50 border-b border-gray-200 shadow-md">
         <div className="mr-10 ml-4">
           <Link href="/" className="block">
             <Image
@@ -59,45 +59,45 @@ export default function Beranda() {
       </motion.section>
 
       {/* Tentang Kami with Animation */}
-      <motion.section
-        id="tentang-kami"
-        className="grid md:grid-cols-2 gap-8 items-center mt-16"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <div>
-          <h2 className="text-2xl font-semibold mb-2">Tentang Kami</h2>
-          <p className="text-gray-700">
-            Kami adalah tim pengembang web yang berkomitmen untuk membantu UMKM Go Digital melalui solusi website e-commerce yang efektif dan terjangkau.
-          </p>
-        </div>
-        <div>
-          <Swiper
-            spaceBetween={20}
-            slidesPerView={1}
-            loop={true}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            modules={[Autoplay]}
-            className="rounded-2xl shadow-lg"
-          >
-            {['g2.jpeg', 'g4.jpeg', 'g6.jpeg'].map((img, i) => (
-              <SwiperSlide key={i}>
-                <div className="w-full rounded-2xl overflow-hidden">
-                  <Image
-                    src={`/images/${img}`}
-                    alt={`Gambar ${i + 1}`}
-                    width={800}
-                    height={500}
-                    className="rounded-2xl object-cover w-full h-auto"
-                    priority={i === 0}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </motion.section>
+<motion.section
+  id="tentang-kami"
+  className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-16"
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+>
+  <div>
+    <h2 className="text-2xl font-semibold mb-2">Tentang Kami</h2>
+    <p className="text-gray-700">
+      Kami adalah tim pengembang web yang berkomitmen untuk membantu UMKM Go Digital melalui solusi website e-commerce yang efektif dan terjangkau.
+    </p>
+  </div>
+  <div className="w-full">
+    <Swiper
+      spaceBetween={20}
+      slidesPerView={1}
+      loop={true}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      modules={[Autoplay]}
+      className="rounded-2xl shadow-lg w-full h-full"
+    >
+      {['g2.jpeg', 'g4.jpeg', 'g6.jpeg'].map((img, i) => (
+        <SwiperSlide key={i}>
+          <div className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden">
+            <Image
+              src={`/images/${img}`}
+              alt={`Gambar ${i + 1}`}
+              fill
+              className="object-cover rounded-2xl"
+              priority={i === 0}
+            />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</motion.section>
+
 
       {/* Layanan Kami with Animation */}
       <motion.section
@@ -176,8 +176,8 @@ export default function Beranda() {
                     <Image
                       src={item.foto}
                       alt={item.nama}
-                      width={80}
-                      height={80}
+                      width={200}
+                      height={200}
                       className="rounded-full object-cover"
                     />
                   </div>
