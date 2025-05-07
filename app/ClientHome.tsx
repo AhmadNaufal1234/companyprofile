@@ -31,14 +31,14 @@ export default function Beranda() {
           </Link>
         </div>
 
-        <div className="lg:hidden" onClick={toggleMenu}>
+        <div className="lg:hidden pr-4" onClick={toggleMenu}>
           {isMenuOpen ? <X className="w-6 h-6 text-gray-800" /> : <Menu className="w-6 h-6 text-gray-800" />}
         </div>
 
         <nav className={`lg:flex space-x-6 ${isMenuOpen ? 'block mt-4' : 'hidden'} lg:block w-full ml-auto justify-end pr-5`}>
-          <Link href="/" className="text-lg text-gray-800 hover:text-yellow-300 block py-2 text-right">Beranda</Link>
-          <Link href="/Portfolio" className="text-lg text-gray-800 hover:text-yellow-300 block py-2 text-right">Portofolio</Link>
-          <Link href="/Kontak" className="text-lg text-gray-800 hover:text-yellow-300 block py-2 text-right">Kontak</Link>
+          <Link href="/" className="text-lg text-gray-800 hover:text-yellow-300 block py-2">Beranda</Link>
+          <Link href="/Portfolio" className="text-lg text-gray-800 hover:text-yellow-300 block py-2">Portofolio</Link>
+          <Link href="/Kontak" className="text-lg text-gray-800 hover:text-yellow-300 block py-2">Kontak</Link>
         </nav>
       </header>
 
