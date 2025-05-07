@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, Star, Workflow } from 'lucide-react';
+import { CheckCircle, Star, Workflow, Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Beranda() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <main className="space-y-16 px-4 py-10 md:px-20 lg:px-32">
+      {/* Navbar */}
+      <header className="flex justify-between items-center py-4">
+        <div className="text-2xl font-bold text-gray-800">
+          <Link href="/">Logo</Link>
+        </div>
+
+        {/* Hamburger Icon */}
+        <div className="lg:hidden" onClick={toggleMenu}>
+          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </div>
+
+        {/* Navbar Links */}
+        <nav className={`lg:flex space-x-6 ${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
+          <Link href="#portfolio" className="text-lg text-gray-600 hover:text-blue-600">Portofolio Lengkap</Link>
+          <Link href="#blog" className="text-lg text-gray-600 hover:text-blue-600">Blog & Artikel</Link>
+          <Button size="sm" className="ml-4">Kontak Kami</Button>
+        </nav>
+      </header>
+
       {/* Hero Section */}
       <section className="text-center space-y-4">
         <h1 className="text-4xl md:text-6xl font-bold">Solusi Website E-Commerce untuk UMKM Indonesia</h1>
