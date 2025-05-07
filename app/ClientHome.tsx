@@ -49,7 +49,7 @@ export default function Beranda() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-4xl md:text-6xl font-bold">Solusi Website E-Commerce untuk UMKM Indonesia</h1>
+        <h1 className="text-4xl md:text-6xl font-bold">Solusi Website Untuk UMKM Indonesia</h1>
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
           Kami bantu UMKM membangun toko online yang profesional, menarik, dan terjangkau.
         </p>
