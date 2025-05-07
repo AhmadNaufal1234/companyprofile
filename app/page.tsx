@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import ClientHome from "./ClientHome";
 
 export const metadata: Metadata = {
-  title: "Beranda | TechFusion",
-  description: "Landing page resmi TechFusion.",
+  title: "Beranda | OneWeb",
+  description: "Landing page resmi OneWeb.",
 };
 
 export default function Home() {
