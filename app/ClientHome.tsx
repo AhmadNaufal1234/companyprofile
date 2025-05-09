@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Menu, ShoppingCart, Brush, Search, Wrench } from 'lucide-react'; 
+import { Menu, X, ShoppingCart, Brush, Search, Wrench } from 'lucide-react'; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
