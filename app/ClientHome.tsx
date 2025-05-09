@@ -208,7 +208,7 @@ export default function Beranda() {
         <div className="grid md:grid-cols-4 gap-8 text-sm text-gray-600">
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Tentang Kami</h3>
-            <p>Kami membantu UMKM Indonesia memiliki toko online yang profesional, menarik, dan mudah digunakan.</p>
+            <p>Kami membantu UMKM Indonesia memiliki toko online yang profesional, menarik, efisien, dan mudah digunakan.</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Layanan</h3>
