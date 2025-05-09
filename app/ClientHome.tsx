@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Menu, X } from 'lucide-react'; // Hanya mengambil yang digunakan
+import { Menu, ShoppingCart, Brush, Search, Wrench } from 'lucide-react'; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';  // Import framer-motion
+import { motion } from 'framer-motion'; 
 
 export default function Beranda() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -107,11 +107,29 @@ export default function Beranda() {
       >
         <h2 className="text-2xl font-semibold text-center mb-6">Layanan Kami</h2>
         <div className="grid md:grid-cols-4 gap-6">
-          {[{ title: 'Web E-Commerce', icon: <X className="w-6 h-6" />, desc: 'Pembuatan website toko online lengkap dengan fitur pembayaran dan pengiriman.' },
-            { title: 'Desain UI/UX', icon: <X className="w-6 h-6" />, desc: 'Tampilan yang menarik dan mudah digunakan untuk meningkatkan penjualan.' },
-            { title: 'SEO & Optimasi', icon: <X className="w-6 h-6" />, desc: 'Website yang mudah ditemukan di Google dan cepat diakses.' },
-            { title: 'Maintenance & Support', icon: <X className="w-6 h-6" />, desc: 'Dukungan teknis dan perawatan rutin agar situs selalu optimal.' }
-          ].map((layanan, i) => (
+          {[
+  {
+    title: 'Web E-Commerce',
+    icon: <ShoppingCart className="w-6 h-6" />,
+    desc: 'Pembuatan website toko online lengkap dengan fitur pembayaran dan pengiriman.'
+  },
+  {
+    title: 'Desain UI/UX',
+    icon: <Brush className="w-6 h-6" />,
+    desc: 'Tampilan yang menarik dan mudah digunakan untuk meningkatkan penjualan.'
+  },
+  {
+    title: 'SEO & Optimasi',
+    icon: <Search className="w-6 h-6" />,
+    desc: 'Website yang mudah ditemukan di Google dan cepat diakses.'
+  },
+  {
+    title: 'Maintenance & Support',
+    icon: <Wrench className="w-6 h-6" />,
+    desc: 'Dukungan teknis dan perawatan rutin agar situs selalu optimal.'
+  }
+]
+.map((layanan, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 50 }}
